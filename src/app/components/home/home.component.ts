@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FooterModule } from '../footer/footer.module';
 
 
@@ -10,16 +10,16 @@ import { FooterModule } from '../footer/footer.module';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  name = 'Sobraldev';
+  name = signal('Sobraldev');
   catUrl = 'https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg';
-  num = 0;
+  num = signal(0);
 
   alertButton() {
     alert('Oi');
   }
 
   somaButton(){
-    this.num += 1;
-    this.name = 'Sys OS V.' + this.num;
+    this.num.update(num => num + 1);
+    this.name.set('Oi ' + this.num()); 
   }
 }
