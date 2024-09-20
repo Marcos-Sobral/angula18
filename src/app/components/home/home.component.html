@@ -1,2 +1,10 @@
 <p>Bem Vindo a {{ name }}, estamos na home e aqui é <app-footer></app-footer></p>
-<img [src]="catUrl" alt=""> <!-- aceitando variavel dentro do atributo src -->
+<img [src]="" alt="passe uma variavel no src para aparecer a imagem"> <!-- aceitando variavel dentro do atributo src -->
+
+<br><br>
+
+<!-- INTERPORLAÇÃO -> {{ VARAIVEL_QUALQUER_UMA }} É PARA PASSAR VÁRIAVEL-->
+<!-- PROPERTY BINDING [ atributo ] É PARA PASSAR VARIAVEL DENTRO DE UM ATRIBUTO-->
+<!-- EVENT BINDING (  atributo ) É PARA FUNÇÃO DENTRO DE UM ATRIBUTO -->
+
+<button (click)="alertButton()">Clique aqui</button>
