@@ -18,6 +18,7 @@ export class HomeComponent {
   count = 0;
   value = false;
   lista = ['Marcos','Débora','Carlo', 'Guilherme', 'Gusta', 'Lorran', "CarLucas", 'Léo'];
+  data = null;
 
 
   constructor(private service: HelloWorldService){
@@ -26,6 +27,7 @@ export class HomeComponent {
       {
         next: (data) => {
           console.log(data);
+         this.data = data[0].source;
         },
         error: (error) => {
           console.log(error);
