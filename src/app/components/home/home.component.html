@@ -10,8 +10,13 @@
 <button (click)="somaButton()">Clique aqui</button>
 
 <!-- diretiva do if sem precisar de importação e contém o else -->
+<!-- Adicionei () na variavel num pois ele é um signal-->
 @if(value){
-    <h2>OI</h2>
+    <h2>Valor é true</h2>
+} @else if(num() == 2){
+    <h2>O numero é 2</h2>
+} @else{
+    <h2>tem nada aqui</h2>
 }
 
 <!-- Para usar o *ngif é necessário fazer o import do CommumModule no standalone ou no app.module-->

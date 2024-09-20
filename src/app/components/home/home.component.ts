@@ -14,7 +14,8 @@ export class HomeComponent {
   name = signal('Sobraldev');
   catUrl = 'https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg';
   num = signal(0);
-  value = true;
+  count = 0;
+  value = false;
 
   alertButton() {
     alert('Oi');
@@ -22,6 +23,8 @@ export class HomeComponent {
 
   somaButton(){
     this.num.update(num => num + 1);
+    this.count += 1;
+    console.log(this.count);
     this.name.set('Sys OS V.' + this.num()); 
   }
 }
