@@ -2,6 +2,23 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
 
+## Especificações utilizada no projeto
+
+<ul>
+  <li>Angular: 18.2.5</li>
+  <li>Angular CLI: 18.2.5</li>
+  <li>Angular devKit/core: 18.2.5</li>
+  <li>Material: </li>
+  <li>Node: 20.16.0</li>
+</ul>
+
+Caso deseje verificar a sua, utilize o comando `ng version` em seu terminal do projeto.
+
+### Problema em adiciona um Json
+Caso esteja tentando importar um arquivo Json para seu projeto, verifique novamente se as declarações feitas no código como também as importações estão mandando para o local exato. Após isso entre no arquivo chama `tsconfig.json` e nele haverá uma sessão denominada de `compilerOptions`, averigue se nela tem alguma importação com o nome `resolveJsonModule` e `esModuleInterop`, se houver apenas modifique seu valor para `true`. Se não houver, adicione eles na sessão:
+  `"resolveJsonModule": true,`
+  `"esModuleInterop": true,`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
