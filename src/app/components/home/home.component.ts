@@ -20,6 +20,6 @@ export class HomeComponent {
 
   somaButton(){
     this.num.update(num => num + 1);
-    this.name.set('Oi ' + this.num()); 
+    this.name.set('Sys OS V.' + this.num()); 
   }
 }
