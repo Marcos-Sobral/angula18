@@ -8,3 +8,12 @@
 <!-- EVENT BINDING (  EVENTO ) É PARA FUNÇÃO DENTRO DE UM EVENTO -->
 
 <button (click)="somaButton()">Clique aqui</button>
+
+<!-- diretiva do if sem precisar de importação e contém o else -->
+@if(value){
+    <h2>OI</h2>
+}
+
+<!-- Para usar o *ngif é necessário fazer o import do CommumModule no standalone ou no app.module-->
+<h2 *ngIf="value">verdadeiro</h2>
+
