@@ -10,5 +10,5 @@ import { FooterModule } from '../footer/footer.module';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  name = 'Sobraldev';
 }
