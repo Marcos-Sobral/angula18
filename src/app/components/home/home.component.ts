@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { FooterModule } from '../footer/footer.module';
 import { CommonModule } from '@angular/common';
+import { HelloWorldService } from '../../services/hello-world.service';
 
 
 @Component({
@@ -17,6 +18,32 @@ export class HomeComponent {
   count = 0;
   value = false;
   lista = ['Marcos','Débora','Carlo', 'Guilherme', 'Gusta', 'Lorran', "CarLucas", 'Léo'];
+
+
+  constructor(private service: HelloWorldService){
+    this.service.getHelloWorld().subscribe(
+      // versao nova
+      {
+        next: (data) => {
+          console.log(data);
+        },
+        error: (error) => {
+          console.log(error);
+        },
+        complete:() => {
+          console.log('finalizou');
+        }
+      }
+
+      //versao abaixo do 17
+      /*(data) => {
+        console.log(data)
+      },
+      (error) => {
+        console.error('Erro ao obter fatos sobre os gatos:', error);
+      } versão antiga tinha verificação de erro*/
+    );
+  }
 
   alertButton() {
     alert('Oi');
