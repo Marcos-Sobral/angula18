@@ -16,6 +16,7 @@ export class HomeComponent {
   num = signal(0);
   count = 0;
   value = false;
+  lista = ['Marcos','Débora','Carlo', 'Guilherme', 'Gusta', 'Lorran', "CarLucas", 'Léo'];
 
   alertButton() {
     alert('Oi');
@@ -23,8 +24,8 @@ export class HomeComponent {
 
   somaButton(){
     this.num.update(num => num + 1);
-    this.count += 1;
-    console.log(this.count);
+    //this.count += 1;
+    //console.log(this.count);
     this.name.set('Sys OS V.' + this.num()); 
   }
 }

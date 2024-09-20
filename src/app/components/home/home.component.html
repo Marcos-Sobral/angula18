@@ -22,3 +22,22 @@
 <!-- Para usar o *ngif é necessário fazer o import do CommumModule no standalone ou no app.module-->
 <h2 *ngIf="value">verdadeiro</h2>
 
+
+<hr>
+
+<H1>Lista de Amigos</H1>
+@for (i of lista; track i){
+    <p> {{ i }}</p>
+} @empty {
+    <p>Vázio</p>
+}
+
+<!-- Como era o @for n antes da versao 17 do angular-->
+<h1>Lista Angula abaixo do 17</h1>
+<ul *ngFor="let i of lista">
+    <li>{{ i }}</li>
+</ul>
+<ul *ngIf="lista.length == 0">
+    <li>Vázio</li>
+</ul>
+
